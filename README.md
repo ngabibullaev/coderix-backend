@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/Assets/logo.webp" width="80" />
+  <img src="https://nodejs.org/static/logos/nodejsLight.svg" width="80" />
   <h1 align="center">CODERIX BACKEND</h1>
   <p align="center">
     <strong>Серверная часть React-приложения</strong>
@@ -21,7 +21,7 @@
 <div align="center">
   
 ![NodeJS](https://img.shields.io/badge/NodeJS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![ExpressJS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=expressjs3&logoColor=white)
+![ExpressJS](https://img.shields.io/badge/ExpressJS-1572B6?style=for-the-badge&logo=expressjs3&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
