@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    input, button {
+        padding: 5px;
+        font-size: 16px;
+    }
+</style>
+<body>
+    <h1>Войдите на сервер</h1>
+    <form action="/add" method="POST">
+        <label for="code1">Логин:</label>
+        <input type="text" id="code1" name="code1">
+
+        <label for="code2">Пароль:</label>
+        <input type="password" id="code2" name="code2"> <!-- Используем тип password для скрытия пароля -->
+
+        <button type="submit">Войти</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[0;1;32m●[0m nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (]8;;file://vd5691/usr/lib/systemd/system/nginx.service/usr/lib/systemd/system/nginx.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Sun 2026-04-05 00:19:30 MSK; 26min ago
+       Docs: ]8;;man:nginx(8)man:nginx(8)]8;;
+   Main PID: 27734 (nginx)
+      Tasks: 2 (limit: 4610)
+     Memory: 4.0M (peak: 5.5M)
+        CPU: 244ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m27734 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"[0m
+             └─[0;38;5;245m29153 "nginx: worker process"[0m
+
+Apr 05 00:28:51 vd5691 systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Apr 05 00:28:51 vd5691 nginx[28467]: 2026/04/05 00:28:51 [warn] 28467#28467: conflicting server name "coderix.ru" on 0.0.0.0:80, ignored
+Apr 05 00:28:51 vd5691 nginx[28467]: 2026/04/05 00:28:51 [warn] 28467#28467: conflicting server name "www.coderix.ru" on 0.0.0.0:80, ignored
+Apr 05 00:28:51 vd5691 nginx[28467]: 2026/04/05 00:28:51 [notice] 28467#28467: signal process started
+Apr 05 00:28:51 vd5691 systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Apr 05 00:41:13 vd5691 systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Apr 05 00:41:13 vd5691 nginx[28794]: 2026/04/05 00:41:13 [warn] 28794#28794: conflicting server name "coderix.ru" on 0.0.0.0:80, ignored
+Apr 05 00:41:13 vd5691 nginx[28794]: 2026/04/05 00:41:13 [warn] 28794#28794: conflicting server name "www.coderix.ru" on 0.0.0.0:80, ignored
+Apr 05 00:41:13 vd5691 nginx[28794]: 2026/04/05 00:41:13 [notice] 28794#28794: signal process started
+Apr 05 00:41:13 vd5691 systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.

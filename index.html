@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input, button {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"><h1>Отправка данных</h1></div>
+    
+    <script>
+        function useState(initialValue) {
+            let _val = initialValue;
+
+            function state() {
+                return _val;
+            }
+
+            function setState(newVal) {
+                _val = newVal;
+            }
+
+            return [state, setState];
+        }
+
+        function App() {
+            const [name, setName] = useState('');
+            const [social, setSocial] = useState('Не указан');
+
+            function addDataToArray() {
+                if (!name() || !social()) {
+                    console.error("Name and social cannot be empty");
+                    return;
+                }
+
+                const newData = {
+                    name: name(),
+                    social: social()
+                };
+
+                fetch('http://localhost:4444/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    form.reset(); // Сброс значений полей после успешной отправки
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            }
+
+            const form = document.createElement('form');
+            
+            const inputName = document.createElement('input');
+            const inputLink = document.createElement('input');
+            const button = document.createElement('button');
+
+            inputName.type = 'text';
+            inputLink.type = 'text';
+            button.textContent = 'Добавить в массив';
+
+            inputName.placeholder = 'Имя';
+            inputLink.placeholder = 'Ссылка';
+
+            inputName.value = name();
+            inputLink.value = social();
+
+            inputName.addEventListener('input', e => setName(e.target.value));
+            inputLink.addEventListener('input', e => setSocial(e.target.value));
+            button.addEventListener('click', addDataToArray);
+
+            form.appendChild(inputName);
+            form.appendChild(inputLink);
+            form.appendChild(button);
+
+            const root = document.getElementById('root');            
+            root.appendChild(form);
+
+            return form;
+        }
+
+        App();
+    </script>
+</body>
+</html>
