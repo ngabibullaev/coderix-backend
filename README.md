@@ -2,7 +2,7 @@
   <img src="https://nodejs.org/static/logos/nodejsLight.svg" width="80" />
   <h1 align="center">CODERIX BACKEND</h1>
   <p align="center">
-    <strong>Серверная часть React-приложения</strong>
+    <strong>Серверная часть CODERIX BACKEND</strong>
   </p>
 </div>
 
@@ -11,7 +11,7 @@
 **📌 Основной функционал:**
 - ✨ Связка сервера с телеграм ботом для получения заявок
 - 🚀 Хранение видео и аудио
-- 🎨 Небольшое админ панель для добавления новых учеников
+- 🎨 Небольшая админ панель для добавления новых учеников
 - 📱  CORS
 
 ---
@@ -34,10 +34,10 @@
 
 ```bash
 # Клонируйте репозиторий
-git clone https://github.com/ngabibullaev/coderix.git
+git clone https://github.com/ngabibullaev/coderix-backend.git
 
 # Перейдите в папку проекта
-cd coderix
+cd coderix-backend
 
 # Установите зависимости
 npm install
